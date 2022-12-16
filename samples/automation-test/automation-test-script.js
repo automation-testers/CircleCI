@@ -132,7 +132,7 @@ describe('Android App sample', () => {
 
   it('should show the app label XPath', async () => {
    
-        const element = $('//android.widget.FrameLayout/android.widget.TextView') 
+        const element = $('//android.widget.TextView[@text="Choose what to allow API Demos to access"]') 
         const text = element.getText()
         console.log(`My address is ${text}`)
       })
