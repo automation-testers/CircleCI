@@ -121,6 +121,7 @@ describe('Android App sample', () => {
   })
 
   it('should show the app label', async () => {
+    console.log('*******************************************************************8');
     console.log(driver.elementByClassName("android.widget.TextView"));
     await driver.elementByClassName("android.widget.TextView")
       .text().then(function (text) {
