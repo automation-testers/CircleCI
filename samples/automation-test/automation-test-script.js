@@ -122,8 +122,8 @@ describe('Android App sample', () => {
 
   it('should show the app label', async () => {
    
-    console.log(driver.elementByClassName("android.widget.TextView"));
-    await driver.elementByClassName("android.widget.TextView")
+      console.log(driver.elementByClassName("android.widget.TextView"));
+      await driver.elementByClassName("android.widget.TextView")
       .text().then(function (text) {
         //assert.equal(text.toLocaleLowerCase(), 'api demos')
           assert.equal('1', '1')
@@ -132,9 +132,14 @@ describe('Android App sample', () => {
 
   it('should show the app label XPath', async () => {
    
-        const element = ('//android.widget.TextView[@text="Choose what to allow API Demos to access"]') 
-        const text = element.getText()
-        console.log(`My address is ${text}`)
+        // const element = $('//android.widget.TextView[@text="Choose what to allow API Demos to access"]') 
+        // //const text = element.getText()
+        // console.log(`My address is ${element}`)
+        
+
+        const address = "//android.widget.FrameLayout/android.widget.TextView"
+        const printAddress= driver.findElementByXPath(address).getText();
+        log.info(printAddress);
       })
        
   })
