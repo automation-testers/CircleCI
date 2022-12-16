@@ -163,12 +163,4 @@ describe('Android App sample', () => {
     }
   })
 
-
-// //wd.configureHttp({
-// 	timeout: 20 * 60000, // 20 mins
-// 	retries: 3,
-// 	retryDelay: 1000
-// })
-
-// const driver = wd.promiseChainRemote(serverConfig)
-// await driver.init(capabilities)
+})
