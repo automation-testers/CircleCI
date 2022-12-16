@@ -123,7 +123,8 @@ describe('Android App sample', () => {
   it('should show the app label', async () => {
     await driver.elementByClassName("android.widget.TextView")
       .text().then(function (text) {
-        assert.equal(text.toLocaleLowerCase(), 'api demos')
+        assert.equal(text.toLocaleLowerCase(), 'choose what to allow api demos to access')
+      
       })
   })
 
