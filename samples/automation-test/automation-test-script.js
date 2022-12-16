@@ -83,7 +83,21 @@ if (!username || !apiKey) {
 
 describe('Android App sample', () => {
 
+
+
+wd.configureHttp({
+	timeout: 20 * 15000, // 20 mins
+	retries: 3,
+	retryDelay: 1000
+})
+
+
+
   before(async () => {
+
+    const driver = wd.promiseChainRemote(serverConfig)
+    await driver.init(capabilities)
+
     driver = wd.promiseChainRemote(kobitonServerConfig)
 
     driver.on('status', (info) => {
