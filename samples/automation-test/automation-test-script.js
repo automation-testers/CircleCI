@@ -85,18 +85,18 @@ describe('Android App sample', () => {
 
 
 
-wd.configureHttp({
-	timeout: 20 * 15000, // 20 mins
-	retries: 3,
-	retryDelay: 1000
-})
-
+// wd.configureHttp({
+// 	timeout: 20 * 15000, // 20 mins
+// 	retries: 3,
+// 	retryDelay: 1000
+// })
+//   const driver = wd.promiseChainRemote(serverConfig)
+//     await driver.init(capabilities)
 
 
   before(async () => {
 
-    const driver = wd.promiseChainRemote(serverConfig)
-    await driver.init(capabilities)
+    
 
     driver = wd.promiseChainRemote(kobitonServerConfig)
 
