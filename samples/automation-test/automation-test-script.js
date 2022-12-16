@@ -121,9 +121,9 @@ describe('Android App sample', () => {
   })
 
   it('should show the app label', async () => {
-    await driver.elementByClassName("android.widget.TextView")
+    await driver.elementByClassName("android.widget.TextView").get(1)
       .text().then(function (text) {
-        assert.equal(text.toLocaleLowerCase(), 'choose what to allow Api Demos to access')
+        assert.equal(text.toLocaleLowerCase(), 'api demos')
       
       })
   })
