@@ -126,16 +126,17 @@ describe('Android App sample', () => {
     await driver.elementByClassName("android.widget.TextView")
       .text().then(function (text) {
         //assert.equal(text.toLocaleLowerCase(), 'api demos')
-          const element = $('//android.widget.FrameLayout/android.widget.TextView') 
-          const text = element.getText()
-          console.log(`My address is ${text}`)
-        assert.equal('1', '1')
-      })
+          assert.equal('1', '1')
+      }) 
+  })
 
-        // const element = $('//android.widget.FrameLayout/android.widget.TextView') 
-        // const text = element.getText()
-        // console.log(`My address is ${text}`)
-        //assert.equal(text.toLocaleLowerCase(), 'api demos')
+  it('should show the app label XPath', async () => {
+   
+        const element = $('//android.widget.FrameLayout/android.widget.TextView') 
+        const text = element.getText()
+        console.log(`My address is ${text}`)
+      })
+       
   })
 
   after(async () => {
@@ -147,7 +148,7 @@ describe('Android App sample', () => {
       }
     }
   })
-})
+
 
 // //wd.configureHttp({
 // 	timeout: 20 * 60000, // 20 mins
