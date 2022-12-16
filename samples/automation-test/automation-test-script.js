@@ -131,7 +131,11 @@ describe('Android App sample', () => {
   })
 
   it('should show the app label XPath', async () => {
-   
+
+      console.log(driver.findElementByXPath("//android.widget.FrameLayout/android.widget.TextView"));
+      await driver.findElementByXPath("//android.widget.FrameLayout/android.widget.TextView")
+      .text().then(function (text) {
+      assert.equal(text.toLocaleLowerCase(), 'api demos')
         // const element = $('//android.widget.TextView[@text="Choose what to allow API Demos to access"]') 
         // //const text = element.getText()
         // console.log(`My address is ${element}`)
@@ -141,11 +145,10 @@ describe('Android App sample', () => {
         // const printAddress= driver.findElementByXPath(address).getText();
         // log.info(printAddress);
         
-        function getElementByXpath(path) {
-          return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
-        }
-        
-        console.log( getElementByXpath("//html[1]/body[1]/div[1]") );
+        // function getElementByXpath(path) {
+        //   return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+        // }        
+        // console.log( getElementByXpath("//html[1]/body[1]/div[1]") );
       })
        
   })
