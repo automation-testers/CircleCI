@@ -136,7 +136,7 @@ for (let i = 0; i < allOrangeJuiceByClass.length; i++) {
 assert.equal(allOrangeJuiceByClass[1],'android.widget.TextView1')
 
     }) 
-})
+
        
   after(async () => {
     if (driver != null) {
@@ -147,5 +147,4 @@ assert.equal(allOrangeJuiceByClass[1],'android.widget.TextView1')
       }
     }
   })
-
 })
