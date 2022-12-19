@@ -84,19 +84,7 @@ if (!username || !apiKey) {
 describe('Android App sample', () => {
 
 
-
-// wd.configureHttp({
-// 	timeout: 20 * 15000, // 20 mins
-// 	retries: 3,
-// 	retryDelay: 1000
-// })
-//   const driver = wd.promiseChainRemote(serverConfig)
-//     await driver.init(capabilities)
-
-
   before(async () => {
-
-    
 
     driver = wd.promiseChainRemote(kobitonServerConfig)
 
@@ -120,43 +108,29 @@ describe('Android App sample', () => {
     }
   })
 
-  // it('should show the app label', async () => {
-   
-  //     //console.log(driver.elementByClassName("android.widget.TextView"));
-  //     await driver.elementByClassName("android.widget.TextView")
-  //     .text().then(function (text) {
-  //         console.log(text)
-  //       //assert.equal(text.toLocaleLowerCase(), 'api demos')
-  //         assert.equal('1', '1')
-  //     }) 
-  // })
+  it('should show the app label', async () => {
+
+        console.log("---------------------------------------------------------------")
+        console.log(driver.elementByClassName("android.widget.TextView"));
+        await driver.elementByClassName("android.widget.TextView")
+        .text().then(function (text) {
+        console.log(text)
+        //assert.equal(text.toLocaleLowerCase(), 'api demos')
+        assert.equal('1', '1')
+      }) 
+  })
 
 //   it('should show the app label', async () => {
 //    let ID1;
 //     //console.log(driver.elementByClassName("android.widget.TextView"));
-//     ID1= driver.elementByClassName("android.widget.TextView")
-//     .text().then(function (text) {
+//         ID1= driver.elementByClassName("android.widget.TextView")
+//         .text().then(function (text) {
 //         console.log(text)
-//       assert.equal(ID1, 'android.widget.TextView')
+//         assert.equal(ID1, 'android.widget.TextView')
 //         // assert.equal('1', '1')
 //     }) 
 // })
-
-  it('should show the app label', async () => {
-   
-    //console.log(driver.elementByClassName("android.widget.TextView"));
-    //await driver.elementByClassName("android.widget.TextView")
-    //.text().then(function (text) {
-    //assert.equal(text.toLocaleLowerCase(), 'api demos')
-    //assert.equal('1', '1')
-
-    let element = await driver.elementByAccessibilityId("-4294967287");
-    console.log('-----------------------------------------------------------')
-    console.log(element)
-    })
        
-
-
   after(async () => {
     if (driver != null) {
       try {
