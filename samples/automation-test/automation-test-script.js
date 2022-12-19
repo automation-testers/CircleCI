@@ -131,28 +131,29 @@ describe('Android App sample', () => {
   //     }) 
   // })
 
+//   it('should show the app label', async () => {
+//    let ID1;
+//     //console.log(driver.elementByClassName("android.widget.TextView"));
+//     ID1= driver.elementByClassName("android.widget.TextView")
+//     .text().then(function (text) {
+//         console.log(text)
+//       assert.equal(ID1, 'android.widget.TextView')
+//         // assert.equal('1', '1')
+//     }) 
+// })
+
   it('should show the app label', async () => {
-   let ID1;
-    //console.log(driver.elementByClassName("android.widget.TextView"));
-    ID1= driver.elementByClassName("android.widget.TextView")
-    .text().then(function (text) {
-        console.log(text)
-      assert.equal(ID1, 'android.widget.TextView')
-        // assert.equal('1', '1')
-    }) 
-})
-
-  // it('should show the app label', async () => {
    
-  //   //console.log(driver.elementByClassName("android.widget.TextView"));
-  //   //await driver.elementByClassName("android.widget.TextView")
-  //   //.text().then(function (text) {
-  //   //assert.equal(text.toLocaleLowerCase(), 'api demos')
-  //   //assert.equal('1', '1')
+    //console.log(driver.elementByClassName("android.widget.TextView"));
+    //await driver.elementByClassName("android.widget.TextView")
+    //.text().then(function (text) {
+    //assert.equal(text.toLocaleLowerCase(), 'api demos')
+    //assert.equal('1', '1')
 
-  //   let element = await driver.
-  //   elementByAccessibilityId("buttonStartWebviewCD");
-  //   })
+    let element = await driver.elementByAccessibilityId("-4294967287");
+    console.log('-----------------------------------------------------------')
+    console.log(element)
+    })
        
 
 
