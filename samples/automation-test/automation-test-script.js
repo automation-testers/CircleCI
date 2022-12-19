@@ -108,34 +108,37 @@ describe('Android App sample', () => {
     }
   })
 
-  // it('should show the app label', async () => {
-
-  //       console.log("---------------------------------------------------------------")
-  //       console.log(driver.elementByClassName("android.widget.TextView"));
-  //       await driver.elementByClassName("android.widget.TextView")
-  //       .text().then(function (text) {
-  //       console.log(text)
-  //       //assert.equal(text.toLocaleLowerCase(), 'api demos')
-  //       assert.equal('1', '1')
-  //     }) 
-  // })
-
   it('should show the app label', async () => {
-   let ID1;
-    //console.log(driver.elementByClassName("android.widget.TextView"));
-        // ID1= driver.elementByClassName("android.widget.TextView1")
-        // .text().then(function (text) {
-        // console.log('text')
-        // assert.equal(ID1, 'android.widget.TextView1')
-        // // assert.equal('1', '1')
-        const allOrangeJuiceByClass = document.getElementsByClassName('android.widget.TextView1');
-let result = "document.getElementsByClassName('android.widget.TextView1')";
-for (let i = 0; i < allOrangeJuiceByClass.length; i++) {
-  result += `\n  ${allOrangeJuiceByClass[i].textContent}`;
-}
-assert.equal(allOrangeJuiceByClass[1],'android.widget.TextView1')
 
-    }) 
+        console.log("---------------------------------------------------------------")
+        //console.log(driver.elementByClassName("android.widget.TextView"));
+        await driver.elementByClassName("android.widget.LinearLayout")
+        //await driver.elementByClassName("android.widget.TextView")
+        .text().then(function (text) {
+        console.log(text)
+        //assert.equal(text.toLocaleLowerCase(), 'api demos')
+        assert.equal('1', '1')
+      }) 
+  })
+
+//   it('should show the app label', async () => {
+//    let ID1;
+//     //console.log(driver.elementByClassName("android.widget.TextView"));
+//         // ID1= driver.elementByClassName("android.widget.TextView1")
+//         // .text().then(function (text) {
+//         // console.log('text')
+//         // assert.equal(ID1, 'android.widget.TextView1')
+//         // // assert.equal('1', '1')
+//         const allOrangeJuiceByClass = document.getElementsByClassName('android.widget.TextView1');
+// let result = "document.getElementsByClassName('android.widget.TextView1')";
+// for (let i = 0; i < allOrangeJuiceByClass.length; i++) {
+//   result += `\n  ${allOrangeJuiceByClass[i].textContent}`;
+//   console.log(result)
+// }
+// assert.equal(allOrangeJuiceByClass[1],'android.widget.TextView1')
+
+//     }) 
+
 
        
   after(async () => {
