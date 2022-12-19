@@ -112,12 +112,12 @@ describe('Android App sample', () => {
 
         console.log("---------------------------------------------------------------")
         //console.log(driver.elementByClassName("android.widget.TextView"));
-        await driver.elementByClassName("android.widget.LinearLayout")
+        await driver.elementByClassName("android.widget.Button")
         //await driver.elementByClassName("android.widget.TextView")
         .text().then(function (text) {
         console.log(text)
-        //assert.equal(text.toLocaleLowerCase(), 'api demos')
-        assert.equal('1', '1')
+        assert.equal(text, 'Continue')
+        //assert.equal('1', '1')
       }) 
   })
 
